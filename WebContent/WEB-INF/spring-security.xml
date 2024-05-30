@@ -414,6 +414,10 @@
         <!-- SystemSettings GET -->
         <intercept-url pattern="/api/systemSettings/getSystemInfo" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')" method="GET" />
 
+        <!-- Synoptic Panels GET -->
+        <intercept-url pattern="/api/synoptic-panels/" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')" method="GET" />
+        <intercept-url pattern="/api/synoptic-panels/{id}" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')" method="GET" />
+
         <!-- REST API Admin -->
         <intercept-url pattern="/api/**" access="hasRole('ROLE_ADMIN')" method="POST" />
         <intercept-url pattern="/api/**" access="hasRole('ROLE_ADMIN')" method="GET" />
